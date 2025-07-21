@@ -56,15 +56,15 @@ public class AppointmentController {
 		List<AppointmentResponseDTO> appointments = appointmentService.getAppointmentsByLawyerId(lawyerId);
 		return ResponseEntity.ok(appointments);
 	}
-//
-//	@GetMapping("/client/{clientId}")
-//	public ResponseEntity<List<AppointmentResponseDTO>> getClientAppointments(@PathVariable Integer clientId) {
-//	    List<AppointmentResponseDTO> appointments = appointmentService.getAppointmentsByClientId(clientId);
-//	    return ResponseEntity.ok(appointments);
-//
-//
-//
-//	}
+
+	@GetMapping("/client/{clientId}")
+	public ResponseEntity<List<AppointmentResponseDTO>> getClientAppointments(@PathVariable Integer clientId) {
+	    List<AppointmentResponseDTO> appointments = appointmentService.getAppointmentsByClientId(clientId);
+	    return ResponseEntity.ok(appointments);
+
+
+
+	}
 
 
 }
