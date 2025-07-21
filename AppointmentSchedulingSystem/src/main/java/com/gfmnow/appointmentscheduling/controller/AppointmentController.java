@@ -51,11 +51,11 @@ public class AppointmentController {
 		return ResponseEntity.ok(new GlobalResponse(200, "Appointment cancelled successfully", LocalDateTime.now()));
 	}
 
-	@GetMapping("/lawyer/{lawyerId}")
-	public ResponseEntity<List<AppointmentResponseDTO>> getLawyerAppointments(@PathVariable Integer lawyerId) {
-		List<AppointmentResponseDTO> appointments = appointmentService.getAppointmentsByLawyerId(lawyerId);
-		return ResponseEntity.ok(appointments);
-	}
+//	@GetMapping("/lawyer/{lawyerId}")
+//	public ResponseEntity<List<AppointmentResponseDTO>> getLawyerAppointments(@PathVariable Integer lawyerId) {
+//		List<AppointmentResponseDTO> appointments = appointmentService.getAppointmentsByLawyerId(lawyerId);
+//		return ResponseEntity.ok(appointments);
+//	}
 
 	@GetMapping("/client/{clientId}")
 	public ResponseEntity<List<AppointmentResponseDTO>> getClientAppointments(@PathVariable Integer clientId) {
